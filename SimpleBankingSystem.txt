@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class BankProcessing{
+    private Map<String, Double> accounts;
+
+    public Bank() {
+        this.accounts = new Hashmap<>();
+    }
+
+public void createAccount(String accountNumber, double initialBalance) {
+    if(!accounts.containsKey(accountNumber)) {
+        accounts.put(accountNumber, intialBalance);
+    }
+}
+
+public void deposit(String accountNumber, double amount) {
+    if (accounts.containsKey(accountNumber)) {
+        double currentbalance = accounts.get(accountNumber);
+        accounts.put(accountNumber, currentBalance + amount);
+    }
+}
+
+public void withdraw(String accountNumber,double amount){
+    if(accounts.containsKey(accountNumber)){
+        double currentBalance = accounts.get(accountNumber);
+        if(currentBalance >= amount) {
+            accounts.put(accountNumber, currentBalance - amount);
+        }
+    }
+}
+
+public double getBalance(String accountNumber) {
+    return accounts.getOrDefault(accountNumber, 0.0);
+}
+}
