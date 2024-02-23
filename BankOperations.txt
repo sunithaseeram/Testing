@@ -1,0 +1,8 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class BankOperations{
+    private Map<String, Double> accounts;
+
+    public BankOP
+}

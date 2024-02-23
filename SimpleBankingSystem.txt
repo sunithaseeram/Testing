@@ -4,7 +4,7 @@ import java.util.Map;
 public class BankProcessing{
     private Map<String, Double> accounts;
 
-    public Bank() {
+    public BankProcessing() {
         this.accounts = new Hashmap<>();
     }
 
