@@ -9,4 +9,11 @@ public class BankOperations{
         bank.createAccount("12345",100.0);
         assertEquals(100.0,bank.getBalance("12345"), 0.001);
     }
+    @Test
+    public void testDeposit() {
+        BankProcessing bank = new BankProcessing();
+        bank.createAccount("67890", 30.0);
+        bank.deposit("67890", 30.0);
+        assertEquals(80.0, bank.getBalance("67890"), 0.001);
+    }
 }
