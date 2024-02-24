@@ -16,4 +16,11 @@ public class BankOperations{
         bank.deposit("67890", 30.0);
         assertEquals(80.0, bank.getBalance("67890"), 0.001);
     }
+    @Test
+    public void testWithdrawal(){
+        BankProcessing bank = new BankProcessing();
+        bank.createAccount("11111",100.0);
+        bank.withdraw("11111",20.0);
+        assertEquals(80.0, bank.getBalance("11111"), 0.001);
+    }
 }
